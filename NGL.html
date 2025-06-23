@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <title>Thanks for Ur Annon Chithi😊</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Bengali Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Bengali&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #000000, #000000);
+      font-family: 'Noto Serif Bengali', serif;
+      color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      height: 100vh;
+      overflow: hidden;
+      position: relative;
+    }
+
+    #logo {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      bottom: 20px;
+      padding: 0px;
+      border-radius: 0px;
+      
+    }
+
+    #logo img {
+      height: 40px;
+      width: auto;
+      display: block;
+    }
+
+    h1 {
+      font-size: 1.8rem;
+      margin-top: 80px;
+      padding: 0 20px;
+      color: #ffd6d6;
+      line-height: 1.6;
+    }
+
+    img {
+      max-width: 90%;
+      width: 300px;
+      border-radius: 12px;
+      margin-top: 20px;
+      
+    }
+
+    .countdown {
+      margin-top: 25px;
+      font-size: 1.2rem;
+      color: #ff8080;
+      font-weight: bold;
+      letter-spacing: 1px;
+      padding: 0 10px;
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 1.5rem;
+      }
+
+      #logo {
+        top: 10px;
+        left: 10px;
+        padding: 4px;
+      }
+
+      #logo img {
+        height: 32px;
+      }
+
+      img {
+        width: 230px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- SAS Logo (Top Left Corner) -->
+  <div id="logo">
+    <img src="saslogo.png" alt="SAS Logo">
+  </div>
+
+  <!-- Thank You Message -->
+  <h1>
+    ধন্যবাদ, সময় করে চিঠিটা দেওয়ার জন্যে...🥰<br>
+  </h1>
+
+  <!-- GIF -->
+  <img src="jarritos-bones-jarritos.gif" alt="Take Love GIF">
+
+  <!-- Timer -->
+  <div class="countdown" id="countdown">
+    প্যারা নিও না; Count the love: ১০ সেকেন্ড পরে তোমায় চিঠি লেখার পেজে নিয়ে যাওয়া হবে 💌
+  </div>
+
+  <script>
+    let sec = 10;
+    const url = "https://chithi.me/sas1";
+
+    const interval = setInterval(() => {
+      sec--;
+      document.getElementById("countdown").textContent =
+        `প্যারা নিও না; Count the love: ${sec} সেকেন্ড পরে তোমায় চিঠি লেখার পেজে নিয়ে যাওয়া হবে 💌`;
+
+      if (sec <= 0) {
+        clearInterval(interval);
+        window.location.href = url;
+      }
+    }, 1000);
+  </script>
+
+</body>
+</html>
